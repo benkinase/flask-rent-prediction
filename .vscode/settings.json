@@ -1,0 +1,19 @@
+{
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "editor.formatOnSave": true,
+  "npm.includeDirectories": ["venv\\Scripts\\python.exe"],
+  "python.pythonPath": "C:\\Users\\PC\\anaconda3\\envs\\flask-ml",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  //"terminal.integrated.automationShell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.cursorBlinking": true,
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}

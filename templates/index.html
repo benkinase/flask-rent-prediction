@@ -2,7 +2,7 @@
 {{ super() }}
 <style>
   .app {
-    background-color: coral;
+    background-color: rgb(105, 22, 70);
   }
 
   .btn {
@@ -11,9 +11,21 @@
   }
   label {
     font-size: 1.1rem;
-    color: rgb(18, 18, 53);
+  }
+
+  label,
+  h2 {
+    color: rgb(201, 201, 219);
+  }
+  select option:hover,
+  select option:focus,
+  select option:active {
+    background-color: rgb(144, 135, 155);
+    outline: none;
   }
 </style>
+
+<!--Content-->
 
 {% endblock %} {% block content %}
 <div class="app">
@@ -24,23 +36,42 @@
     <div class="row">
       <div class="col-lg-6 mb-2">
         <label for="bedrooms">Number of bedrooms</label>
-        <input type="text" name="bedrooms" required class="form-control" />
+        <input
+          type="text"
+          name="bedrooms"
+          id="bedrooms"
+          required
+          class="form-control"
+        />
       </div>
       <div class="col-lg-6 mb-2">
         <label for="bathrooms">Number of bathrooms</label>
-        <input type="text" name="bathrooms" required class="form-control" />
+        <input
+          type="text"
+          name="bathrooms"
+          id="bathrooms"
+          required
+          class="form-control"
+        />
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6 mb-2">
         <label for="size_sqft">Size (square feet)</label>
-        <input type="text" name="size_sqft " required class="form-control" />
+        <input
+          type="text"
+          name="size_sqft"
+          id="size_sqft"
+          required
+          class="form-control"
+        />
       </div>
       <div class="col-lg-6 mb-2">
         <label for="min_to_subway">Distance to subway (minutes)</label>
         <input
           type="text"
           name="min_to_subway"
+          id="min_to_subway"
           placeholder=""
           required
           class="form-control"
@@ -51,7 +82,13 @@
     <div class="row mb-2">
       <div class="col-lg-6 mb-2">
         <label for="floor">Floor level</label>
-        <input type="text" name="floor" required class="form-control" />
+        <input
+          type="text"
+          name="floor"
+          id="floor"
+          required
+          class="form-control"
+        />
       </div>
       <div class="col-lg-6">
         <label for="building_age_yrs">Age of building (years)</label>
@@ -60,6 +97,7 @@
           name="building_age_yrs"
           required
           class="form-control"
+          id="building_age_yrs"
         />
       </div>
     </div>
@@ -95,8 +133,7 @@
         <select name="has_elevator" required class="form-control">
           <option value="">Has elevator?</option>
           <option value="1">ja</option>
-          <option value="0">Nein</option
-          >>
+          <option value="0">Nein</option>
         </select>
       </div>
     </div>
@@ -126,10 +163,10 @@
           <option value="0">Nein</option>
         </select>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 button">
         <button
           type="submit"
-          class="btn bg-dark text-white btn-block mt-5 mb-4 text-uppercase"
+          class="btn bg-dark text-white mt-5 mb-4 text-uppercase"
         >
           Predict
         </button>
@@ -138,7 +175,7 @@
   </form>
 
   <div
-    class="form-group prediction py-4 font-italic text-warning text-center bg-dark h4"
+    class="form-group prediction py-4 font-italic text-warning text-center h4"
   >
     {{ prediction_value }}
   </div>
