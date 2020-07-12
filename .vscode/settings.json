@@ -1,8 +1,8 @@
 {
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.formatOnSave": true,
-  "npm.includeDirectories": ["venv\\Scripts\\python.exe"],
-  "python.pythonPath": "C:\\Users\\PC\\anaconda3\\envs\\flask-ml",
+  //"npm.includeDirectories": ["venv\\Scripts\\python.exe"],
+  "python.pythonPath": "C:\\Users\\PC\\.virtualenvs\\lr-MFv00RKq\\Scripts\\python.exe",
   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
   //"terminal.integrated.automationShell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "terminal.integrated.cursorBlinking": true,
@@ -15,5 +15,6 @@
   "launch": {
     "configurations": [],
     "compounds": []
-  }
+  },
+  "json.schemas": []
 }

@@ -22,15 +22,15 @@ def predict():
     features = [x for x in request.form.values()]
     int_features = list(map(int, features))
 
-    # then to numpy array
+    # then to numpy array and predict
     numpy_features = [np.array(int_features)]
     prediction = loaded_model.predict(numpy_features)
     # print(prediction)
-    coefficients = loaded_model.coef_
-    print(coefficients)
+    #coefficients = loaded_model.coef_
+    #print(coefficients)
 
     return render_template("index.html",  prediction_value="Predicted rent: $%.2f" % prediction)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
